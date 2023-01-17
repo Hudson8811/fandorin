@@ -1,0 +1,37 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "Project title"
+
+block content
+	.fate
+		.fate__content
+			.fate__content__bg2
+			.fate__content__bg3
+			.fate__content__card.fate__content__card--one 
+				img(src="img/card__1.png", alt="card")
+			.fate__content__card.fate__content__card--two 
+				img(src="img/card__2.png", alt="card")
+			.fate__content__bg3
+			.fate__content--logo
+				img(src="img/img__1.png", alt="")
+			.fate__content--title В этом году вы будете обсыпаны комплиментами
+			.fate__content--button.button УЗНАТЬ СУДЬБУ
+			.fate__content--quote
+				!="«...» <br> Юноша чистый, смелый, благородных устремлений и патриот отечества. А как же, у нас в заведении других не держат."
+			.fate__content--book Гадаем по книге «Азазель» Бориса Акунина
+			.fate__content--cinema
+				img(src="img/cinema.png", alt="")
+			.fate__content--soc
+				.fate__content--soc__item(data-title="") 
+					img(src="img/svg/vk.svg", alt="icon")
+				.fate__content--soc__item(data-title="") 
+					img(src="img/svg/od.svg", alt="icon")
+				.fate__content--soc__item(data-title="") 
+					img(src="img/svg/od.svg", alt="icon")
+
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

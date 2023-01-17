@@ -1,0 +1,17 @@
+
+@font-face {
+  font-family: "kudriashov";
+  src: local("kudriashov bold"), local("kudriashov bold"),
+    url("../fonts/kudriashov-bold.woff2") format("woff2"),
+    url("../fonts/kudriashov-bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HarmoniaSansProCyr";
+  src: local("HarmoniaSansProCyr bold"), local("HarmoniaSansProCyr bold"),
+    url("../fonts/HarmoniaSansProCyr-Bold.woff2") format("woff2"),
+    url("../fonts/HarmoniaSansProCyr-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
