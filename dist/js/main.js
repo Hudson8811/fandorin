@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var randomizeTitle = quotes[numberTitle];
     contentTitle.innerHTML = randomizeTitle;
     selectinglistQuotes(randomizeTitle);
-    selectingAtributeSoc(randomizeTitle, numberTitle);
+    randomTitleNum(randomizeTitle, numberTitle);
   }
   function selectinglistQuotes(x) {
     switch (x) {
@@ -98,16 +98,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   function randomQuote(list) {
-    var randomizeQuote = list[Math.floor(Math.random() * list.length)];
+    var randomizeQuoteNum = Math.floor(Math.random() * list.length);
+    var randomizeQuote = list[randomizeQuoteNum];
     contentQuote.innerHTML = randomizeQuote;
+    randomQuoteNum(randomizeQuoteNum);
   }
-  function selectingAtributeSoc(name, num) {
+  var url = {};
+  function randomQuoteNum(a) {
+    var x = a;
+    url.value2 = x;
+  }
+  ;
+  function randomTitleNum(name, num) {
+    var a = name;
+    var b = num;
+    url.title = a;
+    url.value1 = b;
+    selectingAtributeSoc(url);
+  }
+  ;
+  console.log(url);
+  function selectingAtributeSoc(a) {
     var soc = document.querySelectorAll(".fate__content--soc__item");
+    console.log(url);
+    var dataTitle = a.title;
+    var numTitle = a.value1;
+    var numQuote = a.value2;
     soc.forEach(function (item) {
-      var a = name;
-      var x = num;
+      var a = dataTitle;
       item.setAttribute("data-title", a);
-      item.setAttribute("data-url", "/share/".concat(x, "/"));
+      item.setAttribute("data-url", "/share/".concat(numTitle, "/").concat(numQuote));
     });
   }
 });

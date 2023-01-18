@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let randomizeTitle = quotes[numberTitle];
 	contentTitle.innerHTML = randomizeTitle;
 	selectinglistQuotes(randomizeTitle);
-	selectingAtributeSoc(randomizeTitle, numberTitle) 
+	randomTitleNum(randomizeTitle, numberTitle) 
 	}
 	function selectinglistQuotes(x) {
 		switch(x) {
@@ -116,18 +116,36 @@ document.addEventListener('DOMContentLoaded', () => {
 			default:
 				alert( "Нет таких значений" );
 		}
-	}
+	}	
 	function randomQuote(list) {
-	let randomizeQuote = list[Math.floor( Math.random() * list.length )];
-	contentQuote.innerHTML = randomizeQuote;
+		let randomizeQuoteNum =	Math.floor( Math.random() * list.length );
+		let randomizeQuote = list[randomizeQuoteNum];
+		contentQuote.innerHTML = randomizeQuote;
+		randomQuoteNum(randomizeQuoteNum);
 	}
-	function selectingAtributeSoc(name, num) {
+	var url ={};
+	function randomQuoteNum(a) {
+		let x = a;
+		url.value2 = x;
+	};
+	function randomTitleNum(name, num) {
+		let a = name;
+		let b = num;
+		url.title = a;
+		url.value1 = b;
+		selectingAtributeSoc(url);
+	};
+	console.log(url)
+	function selectingAtributeSoc(a) {
 		let soc = document.querySelectorAll(".fate__content--soc__item");
+		console.log(url)
+		let dataTitle = a.title
+		let numTitle = a.value1
+		let numQuote = a.value2
 		soc.forEach((item) => {
-			let a = name;
-			let x = num;
+			let a = dataTitle;
 			item.setAttribute("data-title", a)
-			item.setAttribute("data-url",  `/share/${x}/`)
+			item.setAttribute("data-url",  `/share/${numTitle}/${numQuote}`)
 		})
 	}
 });
