@@ -798,6 +798,10 @@ body {
   animation-delay: 2s;
 }
 
+.fate__content.active .fate__content__card {
+  display: none;
+}
+
 .fate__content.active .fate__content__bg2 {
   display: block;
 }
@@ -844,6 +848,8 @@ body {
   text-decoration: none;
   background-color: #B68253;
   padding: 17px 45px;
+  margin-left: 33px;
+  margin-right: 33px;
   font-family: "Kudriashov";
   font-style: normal;
   font-weight: 700;
@@ -905,6 +911,26 @@ body {
 
   .editor__left.editor__content__left {
     padding-right: 10px;
+  }
+
+  .fate__content__card--two {
+    right: 20px;
+    bottom: -20px;
+  }
+}
+
+@media (max-width: 1079px) {
+  .fate__content__bg2 {
+    background-size: cover;
+  }
+
+  .fate__content__card--one {
+    left: 20px;
+  }
+
+  .fate__content__card--two {
+    right: 20px;
+    bottom: -20px;
   }
 }
 
@@ -974,6 +1000,80 @@ body {
 
   .editor__top.editor__top__two .editor__right.editor__top__right {
     padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 889px) {
+  .fate__content__bg3 {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 875px) {
+  .fate {
+    height: 800px;
+  }
+
+  .fate__content {
+    background-image: none;
+    min-height: 800px;
+  }
+
+  .fate__content__bg3 {
+    min-height: 800px;
+  }
+
+  .fate__content__card--one {
+    width: 100px;
+    height: 129px;
+    top: 186px;
+    left: 44px;
+  }
+
+  .fate__content__card--two {
+    width: 145px;
+    height: 194px;
+    right: 36px;
+    bottom: 98px;
+  }
+
+  .fate__content--logo {
+    top: 60px;
+  }
+
+  .fate__content--cinema {
+    bottom: 40px;
+  }
+
+  .fate__content--title {
+    line-height: 35px;
+  }
+
+  .fate__content--quote {
+    line-height: 28px;
+  }
+
+  .fate__content--book {
+    width: 100vw;
+    max-width: 100vw;
+    left: 0;
+    bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .fate__content--soc {
+    bottom: 47px;
+  }
+
+  .fate__content.active .fate__content__bg2 {
+    display: none;
+  }
+
+  .fate__content.active .fate__content__bg3 {
+    background-image: url(../img/bg__3--mob.png);
+    background-position: top right;
+    background-size: contain;
   }
 }
 
@@ -1056,6 +1156,20 @@ body {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
+  }
+}
+
+@media (max-width: 575px) {
+  .fate__content--title {
+    width: 96vw;
+  }
+
+  .fate__content--quote {
+    width: 96vw;
+  }
+
+  .button {
+    width: 90vw;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

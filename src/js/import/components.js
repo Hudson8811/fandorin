@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 	let contentTitle = document.querySelector('.fate__content--title');
 	let contentQuote = document.querySelector('.fate__content--quote');
+	let button = document.querySelector(".fate__content--button");
 
-
-	let button = document.querySelector(".fate__content--button")
 	if(button !== null) {
 		button.addEventListener("click", function(){
 			let content = document.querySelector(".fate__content")	
