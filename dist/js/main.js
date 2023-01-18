@@ -117,10 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
     selectingAtributeSoc(url);
   }
   ;
-  console.log(url);
   function selectingAtributeSoc(a) {
     var soc = document.querySelectorAll(".fate__content--soc__item");
-    console.log(url);
     var dataTitle = a.title;
     var numTitle = a.value1;
     var numQuote = a.value2;

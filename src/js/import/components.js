@@ -135,10 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		url.value1 = b;
 		selectingAtributeSoc(url);
 	};
-	console.log(url)
 	function selectingAtributeSoc(a) {
 		let soc = document.querySelectorAll(".fate__content--soc__item");
-		console.log(url)
 		let dataTitle = a.title
 		let numTitle = a.value1
 		let numQuote = a.value2
