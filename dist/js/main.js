@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var contentTitle = document.querySelector('.fate__content--title');
   var contentQuote = document.querySelector('.fate__content--quote');
   var button = document.querySelector(".fate__content--button");
+  var book = document.querySelector(".fate__content--book");
+  var soc = document.querySelector(".fate__content--soc");
   if (button !== null) {
     button.addEventListener("click", function () {
       var _this = this;
@@ -44,8 +46,14 @@ document.addEventListener('DOMContentLoaded', function () {
         contentTitle.classList.remove("activeText");
         contentQuote.classList.remove("activeText");
         _this.removeAttribute('disabled');
-      }, "5200");
+        _this.classList.remove("active");
+        book.classList.remove("active");
+        soc.classList.remove("active");
+      }, "4100");
       content.classList.add("active");
+      book.classList.add("active");
+      soc.classList.add("active");
+      this.classList.add("active");
       this.textContent = "ЕЩЕ РАЗ";
       this.setAttribute('disabled', true);
       randomTitle();

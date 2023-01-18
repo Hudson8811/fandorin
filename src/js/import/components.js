@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	let contentTitle = document.querySelector('.fate__content--title');
 	let contentQuote = document.querySelector('.fate__content--quote');
 	let button = document.querySelector(".fate__content--button");
+	let book = document.querySelector(".fate__content--book");
+	let soc = document.querySelector(".fate__content--soc");
 
 	if(button !== null) {
 		button.addEventListener("click", function(){
@@ -15,8 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
 				contentTitle.classList.remove("activeText")
 				contentQuote.classList.remove("activeText")
 				this.removeAttribute('disabled');
-			}, "5200")
+                this.classList.remove("active")
+                book.classList.remove("active")
+                soc.classList.remove("active")
+			}, "4100")
 			content.classList.add("active")
+            book.classList.add("active")
+            soc.classList.add("active")
+			this.classList.add("active")
 			this.textContent = "ЕЩЕ РАЗ"
 			this.setAttribute('disabled', true);
 			randomTitle();
