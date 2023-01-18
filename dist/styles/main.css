@@ -610,6 +610,7 @@ a.editor__link::after {
 
 body {
   overflow-x: hidden;
+  background: #000;
 }
 
 .fate {
@@ -1162,10 +1163,14 @@ body {
 @media (max-width: 575px) {
   .fate__content--title {
     width: 96vw;
+    font-size: 26px;
+    line-height: 1.2;
   }
 
   .fate__content--quote {
-    width: 96vw;
+    width: 94vw;
+    font-size: 17px;
+    line-height: 1.2;
   }
 
   .button {

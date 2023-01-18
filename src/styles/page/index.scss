@@ -1,5 +1,6 @@
 body {
-	overflow-x: hidden;	
+	overflow-x: hidden;
+	background: #000;	
 }
 .fate {
 	position: relative;
@@ -154,6 +155,8 @@ body {
 			}				
 			@media (max-width: 575px) { 
 				width: 96vw;
+				font-size: 26px;
+				line-height: 1.2;
 			}				
 		}
 		&--quote {
@@ -177,7 +180,9 @@ body {
 				line-height: 28px;
 			}		
 			@media (max-width: 575px) { 
-				width: 96vw;
+				width: 94vw;
+				font-size: 17px;
+				line-height: 1.2;
 			}		
 		}
 		&--book {
